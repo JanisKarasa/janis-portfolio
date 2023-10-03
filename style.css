@@ -1,0 +1,61 @@
+:root {
+  /* color variables */
+  --bg-body: hsl(0, 0%, 8%);
+  --bg-contact: hsl(0, 0%, 14%);
+  --accent: hsl(153, 71%, 59%);
+  --text-1: hsl(0, 0%, 85%);
+  --text-2: hsl(0, 0%, 100%);
+  --invalid: hsl(7, 100%, 68%);
+  /* font-size variables x/16 = y rem */
+  --fs-18: 1.125rem;
+  --fs-88: 5.5rem;
+  --fs-72: 4.5rem;
+  --fs-40: 2.5rem;
+  --fs-48: 3rem;
+  --fs-36: 2.25rem;
+  --fs-32: 2rem;
+  --fs-24: 1.5rem;
+  --fs-20: 1.25rem;
+  --container: 69.375rem; /* 1110px / 16px */
+  --transition: 250ms ease-in-out;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-1);
+  font-size: var(--fs-18);
+  /* 28/18=1.56 */
+  line-height: 1.56;
+}
+
+.wrapper {
+  /* calc(100% - 2rem) is the width of this wrapper for mobile view as 1 rem (16px) is the space between wrapper and viewport edge on each side */
+  width: calc(100% - 2rem);
+  /* we use 'rem' instead of pixels because it's more accessible when user change the browser's base font size (16px) */
+  max-width: var(--container); /* 1110px */
+  /* centering on larger viewport widths */
+  margin-inline: auto;
+}
+
+/* TABLET view - 600px */
+@media screen and (min-width: 37.5em) {
+  .wrapper {
+    /* calc(100% - 3.75rem) is the width of this wrapper for tablet view as 1,875 rem (30/16) is the space between wrapper and viewport edge on each side */
+    width: calc(100% - 3.75rem);
+  }
+}
+
