@@ -1,3 +1,5 @@
+/* GLOBAL */
+
 :root {
   /* color variables */
   --bg-body: hsl(0, 0%, 8%);
@@ -29,6 +31,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  text-decoration: none;
 }
 
 body {
@@ -59,3 +62,32 @@ body {
   }
 }
 
+/* HEADER */
+
+.header__home {
+  /* Using online fluid typography calculator https://royalfig.github.io/fluid-typography-calculator/ to set up clamp function 
+  min font size - 24px, max font size - 32px, min viewport - 375px, max viewport - 768px 
+  clam function is handy not to write media queries just for fonts */
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.02rem + 2.03vw, 2rem);
+  color: var(--text-1);
+}
+
+.header__social {
+  display: inline-block;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* hover effect on SVG using path attribute */
+.header__social:hover > svg > path {
+  fill: var(--accent);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
