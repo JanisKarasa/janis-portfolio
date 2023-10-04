@@ -101,3 +101,13 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+
+/* making Accessibility span invisible but accessible for screen readers */
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
