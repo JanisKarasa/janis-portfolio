@@ -64,6 +64,19 @@ body {
 
 /* HEADER */
 
+/* MOBILE view */
+.header {
+  margin-top: 20px;
+}
+
+.header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+
 .header__home {
   /* Using online fluid typography calculator https://royalfig.github.io/fluid-typography-calculator/ to set up clamp function 
   min font size - 24px, max font size - 32px, min viewport - 375px, max viewport - 768px 
@@ -71,6 +84,16 @@ body {
   font-size: 1.5rem;
   font-size: clamp(1.5rem, 1.02rem + 2.03vw, 2rem);
   color: var(--text-1);
+  flex: 1 0 100%;
+  line-height: 1;
+}
+
+.header__social_wrapper {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  /* getting rid of descenders (that gives an extra space underneath a tags) by font-size: 0 */
+  font-size: 0;
 }
 
 .header__social {
@@ -96,12 +119,6 @@ a:hover {
   fill: var(--accent);
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 /* making Accessibility span invisible but accessible for screen readers */
 .visually-hidden {
   position: absolute;
@@ -110,4 +127,19 @@ nav {
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+/* TABLET view - 600px */
+@media screen and (min-width: 37.5em) {
+  .header__nav {
+    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__home {
+    flex: 0;
+  }
+  .header__social_wrapper {
+    gap: 32px;
+  }
 }
