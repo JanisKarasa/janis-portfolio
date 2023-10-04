@@ -77,8 +77,18 @@ body {
   display: inline-block;
 }
 
+/* color transition to a link */
+a {
+  transition: color var(--transition);
+}
+
 a:hover {
   color: var(--accent);
+}
+
+/* color transition to SVG */
+.header__social > svg > path {
+  transition: fill var(--transition);
 }
 
 /* hover effect on SVG using path attribute */
@@ -87,7 +97,7 @@ a:hover {
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
