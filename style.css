@@ -5,8 +5,8 @@
   --bg-body: hsl(0, 0%, 8%);
   --bg-contact: hsl(0, 0%, 14%);
   --accent: hsl(153, 71%, 59%);
-  --text-1: hsl(0, 0%, 85%);
-  --text-2: hsl(0, 0%, 100%);
+  --text-1: hsl(0, 0%, 100%);
+  --text-2: hsl(0, 0%, 85%);
   --invalid: hsl(7, 100%, 68%);
   /* font-size variables x/16 = y rem */
   --fs-18: 1.125rem;
@@ -190,6 +190,11 @@ svg {
 }
 
 /* HERO */
+
+.hero__wrapper {
+  padding-bottom: 80px;
+  border-bottom: 1px solid var(--text-1);
+}
 
 .hero__img {
   width: 174px;
