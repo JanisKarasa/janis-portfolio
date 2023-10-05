@@ -204,18 +204,14 @@ a:hover {
 
 /* green underline under Janis Karasa */
 .hero__text > h1 > span {
-  position: relative;
-  display: inline-block;
-}
-.hero__text > h1 > span::after {
-  display: inline-block;
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 4px;
-  background-color: var(--accent);
-  bottom: -3px;
-  left: 0;
+  background-image: linear-gradient(
+    to right,
+    var(--accent) 75%,
+    var(--accent) 75%
+  );
+  background-position: 0 1.1em;
+  background-repeat: repeat-x;
+  background-size: 8px 4px;
 }
 
 /* TABLET view - 600px */
