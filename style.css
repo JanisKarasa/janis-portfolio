@@ -65,6 +65,7 @@ p {
   font-size: 1rem;
   font-size: clamp(1rem, 0.79rem + 0.89vw, 1.125rem);
   color: var(--text-2);
+  line-height: 1.5;
 }
 
 /* color transition to a link */
@@ -185,6 +186,9 @@ svg {
 
 /* TABLET view - 600px */
 @media screen and (min-width: 37.5em) {
+  .header {
+    margin-top: 30px;
+  }
   .header__nav {
     width: calc(100% - 3.75rem);
     flex-direction: row;
@@ -239,20 +243,6 @@ svg {
   line-height: 1.15;
 }
 
-/* TABLET view - 600px */
-@media screen and (min-width: 600px) {
-  .hero__headline {
-    margin-bottom: 60px;
-  }
-}
-
-/* DESKTOP view - 768px */
-@media screen and (min-width: 768px) {
-  .hero__headline {
-    margin-bottom: 43px;
-  }
-}
-
 .br-visible {
   display: none;
 }
@@ -273,13 +263,6 @@ svg {
   margin-bottom: 24px;
 }
 
-/* TABLET view - 600px */
-@media screen and (min-width: 37.5em) {
-  .hero__img {
-    width: 196px;
-  }
-}
-
 /* HERO RINGS and CIRCLE */
 .hero__rings {
   position: absolute;
@@ -298,7 +281,7 @@ svg {
 /* TABLET view - 600px */
 @media screen and (min-width: 37.5em) {
   .hero__wrapper {
-    padding-bottom: 40px;
+    padding-bottom: 60px;
   }
   .hero__img {
     z-index: -1;
@@ -313,15 +296,31 @@ svg {
     position: absolute;
   }
   .hero__headline {
-    margin-top: 90px;
+    margin-top: 105px;
+    margin-bottom: 60px;
   }
   .br-visible {
     display: initial;
   }
   .hero__description {
     width: 450px;
+    margin-bottom: 34px;
   }
   .hero__circle {
     top: 400px;
+  }
+  .hero__rings {
+    top: 45px;
+    right: 65%;
+  }
+}
+
+/* DESKTOP view */
+@media screen and (min-width: 62.5rem) {
+  .hero__headline {
+    margin-bottom: 43px;
+  }
+  .hero__description {
+    margin-bottom: 66px;
   }
 }
