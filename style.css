@@ -289,7 +289,6 @@ svg {
 }
 
 .hero__circle {
-  display: inline-block;
   position: absolute;
   top: 204px;
   right: 0;
@@ -321,5 +320,8 @@ svg {
   }
   .hero__description {
     width: 450px;
+  }
+  .hero__circle {
+    top: 400px;
   }
 }
