@@ -222,6 +222,8 @@ svg {
 .hero__img img {
   width: 100%;
   font-size: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .hero__text {
@@ -281,9 +283,9 @@ svg {
 /* HERO RINGS and CIRCLE */
 .hero__rings {
   position: absolute;
-  top: 100px;
+  top: 90px;
   right: 50%;
-  z-index: -1;
+  z-index: 1;
 }
 
 .hero__circle {
@@ -304,7 +306,7 @@ svg {
     width: 322px;
     height: auto;
     margin: 0 -2rem 0 auto;
-    /* position: absolute; */
+    position: relative;
   }
   .hero__text {
     top: 0;
