@@ -123,7 +123,6 @@ svg {
 }
 
 /* HEADER */
-
 /* MOBILE view */
 .header {
   margin-top: 20px;
@@ -190,18 +189,26 @@ svg {
     margin-top: 30px;
   }
   .header__nav {
-    width: calc(100% - 3.75rem);
     flex-direction: row;
     justify-content: space-between;
   }
-
   .header__social_wrapper {
     gap: 32px;
   }
 }
 
-/* HERO */
+/* DESKTOP view */
+@media screen and (min-width: 62.5rem) {
+  .header {
+    margin-top: 40px;
+  }
+  .header__social_wrapper {
+    margin-right: 32px;
+  }
+}
 
+/* HERO */
+/* MOBILE view*/
 .hero {
   position: relative;
 }
@@ -289,6 +296,9 @@ svg {
     height: auto;
     margin: 0 -2rem 0 auto;
     position: relative;
+    background: rgb(52, 52, 52) 100%;
+    padding-top: 150px;
+    top: -32px;
   }
   .hero__text {
     top: 0;
@@ -307,7 +317,7 @@ svg {
     margin-bottom: 34px;
   }
   .hero__circle {
-    top: 400px;
+    top: 418px;
   }
   .hero__rings {
     top: 45px;
@@ -317,10 +327,34 @@ svg {
 
 /* DESKTOP view */
 @media screen and (min-width: 62.5rem) {
+  .hero__wrapper {
+    /* getting circle to stick on hero section */
+    position: relative;
+  }
   .hero__headline {
+    margin-top: 127px;
     margin-bottom: 43px;
+    width: 800px;
+    line-height: 1;
   }
   .hero__description {
     margin-bottom: 66px;
+  }
+  .br-visible {
+    display: none;
+  }
+  .hero__img {
+    margin: 0 0 0 auto;
+    top: -42px;
+    background: rgb(52, 52, 52) 100%;
+    padding-top: 120px;
+    width: 445px;
+  }
+  .hero__circle {
+    top: 460px;
+    right: 445px;
+  }
+  .hero__rings {
+    top: 70px;
   }
 }
