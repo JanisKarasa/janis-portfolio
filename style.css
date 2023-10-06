@@ -234,7 +234,7 @@ svg {
   min font size - 40px, max font size - 88px, min viewport - 375px, max viewport - 1000px 
   clam function is handy not to write media queries just for fonts */
   font-size: clamp(2.5rem, 0.7rem + 7.68vw, 5.5rem);
-  line-height: 1;
+  line-height: 1.15;
 }
 
 /* TABLET view - 600px */
@@ -251,6 +251,10 @@ svg {
   }
 }
 
+.br-visible {
+  display: none;
+}
+
 /* green underline under Janis Karasa */
 .hero__text > h1 > span {
   background-image: linear-gradient(
@@ -265,7 +269,6 @@ svg {
 
 .hero__description {
   margin-bottom: 24px;
-  line-height: 1.3;
 }
 
 /* TABLET view - 600px */
@@ -289,4 +292,32 @@ svg {
   top: 204px;
   right: 0;
   translate: 50%;
+}
+
+/* TABLET view - 600px */
+@media screen and (min-width: 37.5em) {
+  .hero__wrapper {
+    padding-bottom: 40px;
+  }
+  .hero__img {
+    z-index: -1;
+    width: 322px;
+    height: auto;
+    margin: 0 -2rem 0 auto;
+    /* position: absolute; */
+  }
+  .hero__text {
+    top: 0;
+    text-align: left;
+    position: absolute;
+  }
+  .hero__headline {
+    margin-top: 90px;
+  }
+  .br-visible {
+    display: initial;
+  }
+  .hero__description {
+    width: 450px;
+  }
 }
