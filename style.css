@@ -458,6 +458,8 @@ svg {
 
 .projects__img {
   margin-bottom: 20px;
+  width: 100%;
+  height: auto;
 }
 
 .projects__name {
@@ -480,4 +482,15 @@ svg {
 
 .projects__links > a {
   margin-right: 30px;
+}
+
+/* TABLET view - 600px */
+@media screen and (min-width: 37.5em) {
+  .projects__grid {
+    gap: 60px 24px;
+  }
+  .projects__item {
+    /* Getting projects stacking in 2 columns */
+    grid-column: span 1;
+  }
 }
