@@ -402,6 +402,20 @@ svg {
     padding: 52px 0;
   }
   .skills__rings {
-    transform: translateX(40%);
+    transform: translateX(45%);
+  }
+}
+
+/* DESKTOP view */
+@media screen and (min-width: 62.5rem) {
+  .skills__wrapper {
+    /* Changing grid to 2 columns */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 58px;
+    padding-top: 72px 0;
+  }
+  .skills__rings {
+    right: 100%;
+    transform: translateX(70%);
   }
 }
