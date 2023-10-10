@@ -390,3 +390,18 @@ svg {
   left: 50%;
   transform: translateY(50%);
 }
+
+/* TABLET view - 600px */
+@media screen and (min-width: 37.5em) {
+  .skills__wrapper {
+    /* Changing grid to 2 columns */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 52px;
+    text-align: left;
+    border-bottom: none;
+    padding: 52px 0;
+  }
+  .skills__rings {
+    transform: translateX(40%);
+  }
+}
