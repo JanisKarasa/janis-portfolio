@@ -494,3 +494,31 @@ svg {
     grid-column: span 1;
   }
 }
+
+/* DESKTOP view */
+@media screen and (min-width: 62.5rem) {
+  .project__grid {
+    gap: 70px 30px;
+  }
+  .projects__item {
+    /* setting projects_item as a grid to place projects_links on the top of it*/
+    display: grid;
+    /* setting 1 column */
+    grid-template-columns: 1fr;
+    /* setting 4 rows with auto height */
+    grid-template-rows: repeat(4, auto);
+  }
+  .projects__item > picture {
+    /* setting picture element (that includes the projects__image) on 2 columns and 2 rows */
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  .projects__links {
+    /* setting projects__links on 2 columns and 2 rows */
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    /* then center the links on the picture */
+    justify-self: center;
+    align-self: center;
+  }
+}
