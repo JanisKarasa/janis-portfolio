@@ -246,6 +246,7 @@ svg {
   /* Using online fluid typography calculator https://royalfig.github.io/fluid-typography-calculator/ to set up clamp function 
   min font size - 40px, max font size - 88px, min viewport - 375px, max viewport - 1000px 
   clam function is handy not to write media queries just for fonts */
+  font-size: 2.5rem;
   font-size: clamp(2.5rem, 0.7rem + 7.68vw, 5.5rem);
   line-height: 1.15;
 }
@@ -379,6 +380,7 @@ svg {
   /* Using online fluid typography calculator https://royalfig.github.io/fluid-typography-calculator/ to set up clamp function 
   min font size - 32px, max font size - 48px, min viewport - 375px, max viewport - 600px, viewport range is when the font-size change
   clamp function is handy not to write media queries just for fonts */
+  font-size: 2rem;
   font-size: clamp(2rem, 0.33rem + 7.11vw, 3rem);
   line-height: 1.17;
   margin-bottom: 2px;
@@ -418,4 +420,64 @@ svg {
     right: 100%;
     transform: translateX(70%);
   }
+}
+
+/* PROJECTS */
+/* MOBILE view */
+.projects__wrapper {
+  padding: 80px 0;
+}
+
+.projects__grid {
+  display: grid;
+  /* grid in 2 columns so we can line up the headline 'Projects' with 'contact me' */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.projects__headline {
+  /* headline 'Projects' will start on the first vertical grid-line and end on the second one */
+  grid-column: 1 / 2;
+  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 0.7rem + 7.68vw, 5.5rem);
+  line-height: 1;
+}
+
+.projects__contact {
+  /* 'contact me' will start on the second vertical grid-line and go till the third grid-line */
+  grid-column: 2 / 3;
+  /* getting an element on the right and vertically centered */
+  justify-self: end;
+  align-self: center;
+}
+
+.projects__item {
+  /* 'projects item' column going to start at first and will end at third grid-line */
+  grid-column: 1 / 3;
+}
+
+.projects__img {
+  margin-bottom: 20px;
+}
+
+.projects__name {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.projects__tags {
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.projects__tags > span {
+  margin-right: 18px;
+  text-transform: uppercase;
+}
+
+.projects__links > a {
+  margin-right: 30px;
 }
