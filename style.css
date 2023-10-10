@@ -358,3 +358,35 @@ svg {
     top: 70px;
   }
 }
+
+/* SKILLS */
+/* MOBILE view */
+.skills {
+  /* getting rings in right position - sticking to in boundaries of the skills section */
+  position: relative;
+}
+
+.skills__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  text-align: center;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--text-2);
+}
+
+.skills__title {
+  /* Using online fluid typography calculator https://royalfig.github.io/fluid-typography-calculator/ to set up clamp function 
+  min font size - 32px, max font size - 48px, min viewport - 375px, max viewport - 600px, viewport range is when the font-size change
+  clamp function is handy not to write media queries just for fonts */
+  font-size: clamp(2rem, 0.33rem + 7.11vw, 3rem);
+  line-height: 1.17;
+  margin-bottom: 2px;
+}
+
+.skills__rings {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateY(50%);
+}
