@@ -547,5 +547,11 @@ svg {
     align-self: center;
     /* 4. setting links above the pictures ::after pseudo element */
     z-index: 1;
+    /* 6. Making Links invisible until Hover state on projects__item is enabled (7.) */
+    opacity: 0;
+  }
+  /* 7. Making Links visible once Hover state on projects__item is enabled */
+  .projects__item:hover .projects__links {
+    opacity: 1;
   }
 }
