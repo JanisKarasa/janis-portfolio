@@ -100,6 +100,13 @@ a:hover {
   color: var(--accent);
 }
 
+/* giving a focus a visibility for keyboard users and padding */
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  /* and padding */
+  outline-offset: 2px;
+}
+
 .wrapper {
   /* calc(100% - 2rem) is the width of this wrapper for mobile view as 1 rem (16px) is the space between wrapper and viewport edge on each side */
   width: calc(100% - 2rem);
@@ -553,5 +560,12 @@ svg {
   /* 7. Making Links visible once Hover state on projects__item is enabled */
   .projects__item:hover .projects__links {
     opacity: 1;
+  }
+  /* Trigger overlay for keyboard users */
+  .projects__item:focus-within .projects__links {
+    opacity: 1;
+  }
+  .projects__item:focus-within .projects__picture::after {
+    opacity: 0.5;
   }
 }
