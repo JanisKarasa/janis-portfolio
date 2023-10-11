@@ -543,8 +543,9 @@ svg {
     /* 3. add the transition to opacity change */
     transition: opacity 150ms ease-in-out;
   }
-  /* 2. if you hover over the picture(tag), then the after pseudo element of the picture(tag) will change an opacity to 0.5 */
-  .projects__item > picture:hover::after{
+  /* 5. if you hover over the projects__item, then the 'after' pseudo element of the picture(tag) will change an opacity to 0.5 */
+  /* that way we're giving to overlay an opacity when the links are hovered too as before opacity didn't work on overlay for links' hover state */
+  .projects__item:hover picture::after {
     opacity: 0.5;
   }
 }
