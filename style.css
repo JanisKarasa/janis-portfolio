@@ -556,6 +556,8 @@ svg {
     z-index: 1;
     /* 6. Making Links invisible until Hover state on projects__item is enabled (7.) */
     opacity: 0;
+    /* Making links appear after overlay */
+    transition: opacity 450ms ease-in-out;
   }
   /* 7. Making Links visible once Hover state on projects__item is enabled */
   .projects__item:hover .projects__links {
