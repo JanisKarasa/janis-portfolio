@@ -39,10 +39,16 @@ html {
   box-sizing: inherit;
 }
 
+body,
+input,
+textarea,
+button {
+  font-family: "Space Grotesk", sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: "Space Grotesk", sans-serif;
   background-color: var(--bg-body);
   color: var(--text-1);
   font-size: var(--fs-18);
@@ -73,7 +79,8 @@ a {
   transition: color var(--transition);
 }
 
-a.underline {
+a.underline,
+button {
   font-size: 1rem;
   line-height: 1.625;
   letter-spacing: 0.143em;
@@ -96,12 +103,15 @@ a.underline {
   padding-bottom: 10px;
 }
 
-a:hover {
+a:hover,
+button:hover {
   color: var(--accent);
+  cursor: pointer;
 }
 
 /* giving a focus a visibility for keyboard users and padding */
-a:focus-visible {
+a:focus-visible,
+button:focus-visible {
   outline: 2px solid var(--accent);
   /* and padding */
   outline-offset: 2px;
@@ -570,4 +580,64 @@ svg {
   .projects__item:focus-within .projects__picture::after {
     opacity: 0.5;
   }
+}
+
+/* CONTACT */
+/* MOBILE view */
+.contact {
+  background-color: var(--bg-contact);
+}
+
+.contact__wrapper {
+  padding: 60px 0;
+}
+
+.contact__text {
+  text-align: center;
+}
+
+.contact__headline {
+  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 0.7rem + 7.68vw, 5.5rem);
+  line-height: 1;
+  margin-bottom: 1.25rem;
+}
+
+.contact__details > input,
+textarea {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--text-2);
+  font-size: 1.3rem;
+  line-height: 1.625;
+  color: var(--text-1);
+  margin-top: 36px;
+  padding: 0 0 16px 24px;
+}
+
+/* Disable resizing of text area (the small triangle in bottom-right corner) */
+textarea {
+  resize: none;
+}
+
+.contact__details > *::placeholder {
+  color: var(--text-1);
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+/* getting button to the right */
+.align-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact__details button {
+  background-color: transparent;
+  border: none;
+  margin-top: 36px;
+  font-size: 1.3rem;
+  line-height: 1.625;
 }
