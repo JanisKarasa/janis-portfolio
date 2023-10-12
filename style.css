@@ -151,9 +151,7 @@ svg {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  position: absolute;
   left: 50%;
-  transform: translateX(-50%);
   z-index: 1;
 }
 
@@ -215,7 +213,7 @@ svg {
 }
 
 /* DESKTOP view */
-@media screen and (min-width: 62.5rem) {
+@media screen and (min-width: 62.5em) {
   .header {
     margin-top: 40px;
   }
@@ -315,8 +313,8 @@ svg {
     margin: 0 -2rem 0 auto;
     position: relative;
     background: rgb(52, 52, 52) 100%;
-    padding-top: 150px;
-    top: -32px;
+    padding-top: 182px;
+    top: -64px;
   }
   .hero__text {
     top: 0;
@@ -344,7 +342,7 @@ svg {
 }
 
 /* DESKTOP view */
-@media screen and (min-width: 62.5rem) {
+@media screen and (min-width: 62.5em) {
   .hero__wrapper {
     /* getting circle to stick on hero section */
     position: relative;
@@ -363,9 +361,9 @@ svg {
   }
   .hero__img {
     margin: 0 0 0 auto;
-    top: -42px;
+    top: -74px;
     background: rgb(52, 52, 52) 100%;
-    padding-top: 120px;
+    padding-top: 152px;
     width: 445px;
   }
   .hero__circle {
@@ -426,7 +424,7 @@ svg {
 }
 
 /* DESKTOP view */
-@media screen and (min-width: 62.5rem) {
+@media screen and (min-width: 62.5em) {
   .skills__wrapper {
     /* Changing grid to 2 columns */
     grid-template-columns: repeat(3, 1fr);
@@ -517,7 +515,7 @@ svg {
 }
 
 /* DESKTOP view */
-@media screen and (min-width: 62.5rem) {
+@media screen and (min-width: 62.5em) {
   .project__grid {
     gap: 70px 30px;
   }
@@ -591,7 +589,8 @@ svg {
 .contact__wrapper {
   /* make it relative to position the rings */
   position: relative;
-  padding: 60px 0;
+  padding: 60px 0 100px 0;
+  border-bottom: 2px solid var(--text-2);
 }
 
 .contact__text {
@@ -683,14 +682,17 @@ textarea:focus-visible {
   position: absolute;
   bottom: 0;
   right: 50%;
-  transform: translateY(-61%);
+  transform: translateY(-91%);
 }
 
 /* TABLET view - 600px */
 @media screen and (min-width: 37.5em) {
+  .contact__wrapper {
+    border-bottom: none;
+  }
   .contact__rings {
-    right: 50%;
-    transform: translateX(-42%);
+    right: 100%;
+    transform: translateY(-40%);
   }
 }
 
@@ -703,14 +705,13 @@ textarea:focus-visible {
     /* giving a space between columns */
     justify-content: space-between;
   }
-.contact__text {
-  margin-top:36px;
-  text-align: left;
-}
+  .contact__text {
+    margin-top: 36px;
+    text-align: left;
+  }
   .contact__rings {
-    top: 50%;
+    top: 60%;
     left: 0;
-    transform: translateY(-50%);
     transform: translateX(-70%);
   }
 }
@@ -719,5 +720,30 @@ textarea:focus-visible {
 @media (max-width: 62.49875em) {
   .contact__wrapper {
     max-width: 27.8rem;
+  }
+}
+
+/* FOOTER */
+/* MOBILE view */
+.footer {
+  background-color: var(--bg-contact);
+}
+
+.footer__wrapper {
+  padding: 40px 0 60px 0;
+}
+
+/* TABLET view - 600px */
+@media screen and (min-width: 37.5em) {
+  .footer__wrapper {
+    padding: 30px 0 40px 0;
+    border-top: 2px solid var(--text-2);
+  }
+}
+
+/* DESKTOP view */
+@media screen and (min-width: 62.5em) {
+  .footer__wrapper {
+    padding: 47px 0 92px 0;
   }
 }
