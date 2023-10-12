@@ -645,6 +645,8 @@ textarea {
   margin-top: 36px;
   font-size: 1.3rem;
   line-height: 1.625;
+  padding-inline: 0;
+  padding-bottom: 11px;
 }
 
 /* 2. position invalid icon on the right side of the input and textarea elements */
