@@ -603,6 +603,11 @@ svg {
   margin-bottom: 1.25rem;
 }
 
+.contact__details {
+  /* 1. make it relative to position invalid icon on the right side of the input and textarea elements */
+  position: relative;
+}
+
 .contact__details > input,
 textarea {
   display: block;
@@ -640,4 +645,31 @@ textarea {
   margin-top: 36px;
   font-size: 1.3rem;
   line-height: 1.625;
+}
+
+/* 2. position invalid icon on the right side of the input and textarea elements */
+.contact__invalid-icon {
+  display: none;
+  position: absolute;
+  top: 0.31rem;
+  right: 0;
+}
+
+/* 3. if input and textarea is invalid on focus-visible state, then (use a sibling selector (~)) invalid icon ... */
+input:focus-visible:invalid ~ .contact__invalid-icon {
+  /* ... should be display: inline-block to have it next to the text box (input) */
+  display: inline-block;
+}
+
+/* changing color of bottom border to red if the fields are not filled properly on focus mode */
+input:focus-visible:invalid,
+textarea:focus-visible:invalid {
+  border-bottom-color: var(--invalid);
+}
+
+/* changing color of bottom border on focus mode */
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  border-bottom-color: var(--accent);
 }
