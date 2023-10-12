@@ -586,6 +586,8 @@ svg {
 /* MOBILE view */
 .contact {
   background-color: var(--bg-contact);
+  /* make it relative to position the rings */
+  position: relative;
 }
 
 .contact__wrapper {
@@ -675,4 +677,11 @@ input:focus-visible,
 textarea:focus-visible {
   outline: none;
   border-bottom-color: var(--accent);
+}
+
+.contact__rings {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateY(-61%);
 }
