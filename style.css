@@ -586,11 +586,11 @@ svg {
 /* MOBILE view */
 .contact {
   background-color: var(--bg-contact);
-  /* make it relative to position the rings */
-  position: relative;
 }
 
 .contact__wrapper {
+  /* make it relative to position the rings */
+  position: relative;
   padding: 60px 0;
 }
 
@@ -684,4 +684,16 @@ textarea:focus-visible {
   bottom: 0;
   right: 50%;
   transform: translateY(-61%);
+}
+
+/* TABLET view - 600px */
+@media screen and (min-width: 37.5em) {
+  .contact__wrapper {
+    max-width: 27.8rem;
+    margin: 0 auto;
+  }
+  .contact__rings {
+    right: 50%;
+    transform: translateX(-42%)
+  }
 }
