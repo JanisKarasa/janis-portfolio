@@ -658,7 +658,8 @@ textarea {
 }
 
 /* 3. if input and textarea is invalid on focus-visible state, then (use a sibling selector (~)) invalid icon ... */
-input:focus-visible:invalid ~ .contact__invalid-icon {
+input:focus-visible:invalid ~ .contact__invalid-icon,
+textarea:focus-visible:invalid ~ .contact__invalid-icon {
   /* ... should be display: inline-block to have it next to the text box (input) */
   display: inline-block;
 }
