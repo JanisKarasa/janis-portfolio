@@ -688,12 +688,36 @@ textarea:focus-visible {
 
 /* TABLET view - 600px */
 @media screen and (min-width: 37.5em) {
-  .contact__wrapper {
-    max-width: 27.8rem;
-    margin: 0 auto;
-  }
   .contact__rings {
     right: 50%;
-    transform: translateX(-42%)
+    transform: translateX(-42%);
+  }
+}
+
+/* DESKTOP view */
+@media screen and (min-width: 62.5em) {
+  .contact__wrapper {
+    display: grid;
+    /* setting 2 grid columns, each 27.8rem wide */
+    grid-template-columns: repeat(2, 27.8rem);
+    /* giving a space between columns */
+    justify-content: space-between;
+  }
+.contact__text {
+  margin-top:36px;
+  text-align: left;
+}
+  .contact__rings {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transform: translateX(-70%);
+  }
+}
+
+/* In max-width of 999.98px of the viewpoint the contact__wrapper max-width stays 27.8rem wide */
+@media (max-width: 62.49875em) {
+  .contact__wrapper {
+    max-width: 27.8rem;
   }
 }
