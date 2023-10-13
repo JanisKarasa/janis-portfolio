@@ -686,6 +686,20 @@ textarea:focus-visible {
   transform: translateY(-91%);
 }
 
+/* reCAPTCHA */
+.reCaptcha__wrapper {
+  text-align: right;
+}
+
+.g-recaptcha {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding: 10px 0;
+  transform: scale(0.77);
+  transform-origin: right top;
+}
+
 /* TABLET view - 600px */
 @media screen and (min-width: 37.5em) {
   .contact__wrapper {
