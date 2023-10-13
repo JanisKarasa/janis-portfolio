@@ -373,7 +373,14 @@
               possible.
             </p>
           </div>
-          <form class="contact__form" name="contact" netlify>
+          <!-- Enabling Netlify form handling and adding Spam filter reCAPTCHA -->
+          <form
+            class="contact__form"
+            name="contact form"
+            method="POST"
+            data-netlify-recaptcha="true"
+            data-netlify="true"
+          >
             <div class="contact__details">
               <label for="name" class="visually-hidden">Name</label>
               <input
@@ -427,6 +434,8 @@
                 height="24"
               />
             </div>
+            <!-- Adding Spam filter reCAPTCHA -->
+            <div data-netlify-recaptcha="true"></div>
             <div class="contact__details align-right">
               <button type="submit">Send Message</button>
             </div>
