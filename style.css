@@ -501,8 +501,8 @@ svg {
   text-transform: uppercase;
 }
 
-.projects__links a:nth-child(1) {
-  margin-right: 30px;
+.projects__links a:nth-child(2) {
+  margin-left: 30px;
 }
 
 /* TABLET view - 600px */
@@ -682,7 +682,7 @@ textarea:focus-visible {
 
 .contact__rings {
   position: absolute;
-  bottom: 28%;
+  bottom: 25.3%;
   right: 50%;
   /* transform: translateY(-21%); */
 }
