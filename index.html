@@ -20,7 +20,10 @@
     <link rel="stylesheet" href="style.css" />
 
     <!-- linking script -->
-    <script defer src="script.js"></script>
+    <script defer src="main.js"></script>
+
+    <!-- Scroll Animation Library - AOS - Animate On Scroll (https://michalsnik.github.io/aos/) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <title>janiskarasa portfolio</title>
   </head>
@@ -30,7 +33,7 @@
       <!-- Adding accessible visually-hidden Header for Screen-readers -->
       <h2 class="visually-hidden">Header</h2>
       <!-- NAVIGATION section -->
-      <div class="wrapper">
+      <div class="wrapper" data-aos="fade-down">
         <nav class="header__nav">
           <!-- Adding accessible visually-hidden Navigation for Screen-readers -->
           <h2 class="visually-hidden">Navigation</h2>
@@ -176,7 +179,7 @@
       <!-- HERO section -->
       <section class="hero">
         <div class="wrapper hero__wrapper">
-          <div class="hero__img">
+          <div class="hero__img" data-aos="fade-left">
             <img
               src="/assets/images/JANIS_no_background.png"
               alt="picture of Janis"
@@ -189,6 +192,7 @@
             alt=""
             width="530"
             height="129"
+            data-aos="fade-right"
           />
           <img
             class="hero__circle"
@@ -196,16 +200,21 @@
             alt=""
           />
           <div class="hero__text">
-            <h1 class="hero__headline">
+            <h1 class="hero__headline" data-aos="fade-right">
               Nice to <br class="br-visible" />
               meet you! I'm <br class="br-visible" />
               <span>Janis Karasa</span>.
             </h1>
-            <p class="hero__description">
+            <p class="hero__description" data-aos="fade-left">
               Based in the Poland, I'm a junior web/front-end developer
               passionate about building web apps that users love.
             </p>
-            <a href="#contact" class="hero__contact underline">Contact me</a>
+            <a
+              href="#contact"
+              class="hero__contact underline"
+              data-aos="fade-up"
+              >Contact me</a
+            >
           </div>
         </div>
       </section>
@@ -216,39 +225,39 @@
         <div class="wrapper skills__wrapper">
           <!-- Adding accessible visually-hidden Skills Section for Screen-readers -->
           <h2 class="visually-hidden">Skills</h2>
-          <div class="skills__item">
+          <div class="skills__item" data-aos="fade-up">
             <h3 class="skills__title">HTML</h3>
             <!-- <p class="skills__description">2 years of experience</p> -->
           </div>
-          <div class="skills__item">
+          <div class="skills__item" data-aos="fade-up">
             <h3 class="skills__title">CSS</h3>
             <!-- <p class="skills__description">2 years of experience</p> -->
           </div>
-          <div class="skills__item">
+          <div class="skills__item" data-aos="fade-up">
             <h3 class="skills__title">JavaScript</h3>
             <!-- <p class="skills__description">1 year of experience</p> -->
           </div>
-          <div class="skills__item">
+          <div class="skills__item" data-aos="fade-up">
             <h3 class="skills__title">Python</h3>
             <!-- <p class="skills__description">1 year of experience</p> -->
           </div>
-          <div class="skills__item">
+          <div class="skills__item" data-aos="fade-up">
             <h3 class="skills__title">Flask</h3>
             <!-- <p class="skills__description">Half year of experience</p> -->
           </div>
-          <div class="skills__item">
+          <div class="skills__item" data-aos="fade-up">
             <h3 class="skills__title">Django</h3>
             <!-- <p class="skills__description">Half year of experience</p> -->
           </div>
-          <div class="skills__item">
+          <div class="skills__item" data-aos="fade-up">
             <h3 class="skills__title">SQL</h3>
             <!-- <p class="skills__description">Half year of experience</p> -->
           </div>
-          <div class="skills__item">
+          <div class="skills__item" data-aos="fade-up">
             <h3 class="skills__title">Git</h3>
             <!-- <p class="skills__description">1 year of experience</p> -->
           </div>
-          <div class="skills__item">
+          <div class="skills__item" data-aos="fade-up">
             <h3 class="skills__title">CMS</h3>
             <!-- <p class="skills__description">1 year of experience</p> -->
           </div>
@@ -270,11 +279,14 @@
           <!-- Adding accessible visually-hidden Project Section for Screen-readers -->
           <h2 class="visually-hidden">Projects</h2>
           <div class="projects__grid">
-            <h2 class="projects__headline">Projects</h2>
-            <a href="#contact" class="projects__contact underline"
+            <h2 class="projects__headline" data-aos="fade-right">Projects</h2>
+            <a
+              href="#contact"
+              class="projects__contact underline"
+              data-aos="fade-left"
               >Contact me</a
             >
-            <div class="projects__item">
+            <div class="projects__item" data-aos="fade-right">
               <!-- As we have 2 versions of the image (mobile and tablet/desktop), we switch them with 'source' tags in picture tag -->
               <picture class="projects__picture">
                 <source
@@ -284,12 +296,12 @@
                 <img
                   class="projects__img"
                   src="/assets/images/shaif-s-cuisine_thumbnail.png"
-                  alt="screenshot of restaurant landing page"
+                  alt="screenshot of restaurant website"
                   width-="343"
                   height="253"
                 />
               </picture>
-              <h3 class="projects__name">Restaurant Landing Page</h3>
+              <h3 class="projects__name">Restaurant Website</h3>
               <p class="projects__tags">
                 <span>HTML</span>
                 <span>CSS</span>
@@ -308,7 +320,7 @@
                 >
               </div>
             </div>
-            <div class="projects__item">
+            <div class="projects__item" data-aos="fade-left">
               <!-- As we have 2 versions of the image (mobile and tablet/desktop), we switch them with 'source' tags in picture tag -->
               <picture class="projects__picture">
                 <source
@@ -345,7 +357,7 @@
                 >
               </div>
             </div>
-            <div class="projects__item">
+            <div class="projects__item" data-aos="fade-right">
               <!-- As we have 2 versions of the image (mobile and tablet/desktop), we switch them with 'source' tags in picture tag -->
               <picture class="projects__picture">
                 <source
@@ -368,7 +380,7 @@
                 <a href="" class="underline">View Project</a>
               </div>
             </div>
-            <div class="projects__item">
+            <div class="projects__item" data-aos="fade-left">
               <!-- As we have 2 versions of the image (mobile and tablet/desktop), we switch them with 'source' tags in picture tag -->
               <picture class="projects__picture">
                 <source
@@ -394,7 +406,7 @@
                 <!-- <a href="" class="underline">View Code</a> -->
               </div>
             </div>
-            <div class="projects__item">
+            <div class="projects__item" data-aos="fade-right">
               <!-- As we have 2 versions of the image (mobile and tablet/desktop), we switch them with 'source' tags in picture tag -->
               <picture class="projects__picture">
                 <source
@@ -420,7 +432,7 @@
                 <!-- <a href="" class="underline">View Code</a> -->
               </div>
             </div>
-            <div class="projects__item">
+            <div class="projects__item" data-aos="fade-left">
               <!-- As we have 2 versions of the image (mobile and tablet/desktop), we switch them with 'source' tags in picture tag -->
               <picture class="projects__picture">
                 <source
@@ -456,7 +468,7 @@
         <div class="wrapper contact__wrapper">
           <!-- Adding accessible visually-hidden Contact Section for Screen-readers -->
           <h2 class="visually-hidden">Contact Form</h2>
-          <div class="contact__text">
+          <div class="contact__text" data-aos="fade-right">
             <h2 class="contact__headline">Contact</h2>
             <p class="contact__description">
               I would like to hear about your project and how I could help.
@@ -471,6 +483,7 @@
             method="POST"
             data-netlify-recaptcha="true"
             data-netlify="true"
+            data-aos="fade-left"
           >
             <div class="contact__details">
               <label for="name" class="visually-hidden">Name</label>
@@ -706,5 +719,8 @@
 
       gtag("config", "G-DRKV80TTSB");
     </script>
+
+    <!-- Scroll Animation Library - AOS - Animate On Scroll script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   </body>
 </html>
