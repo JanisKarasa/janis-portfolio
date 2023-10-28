@@ -25,6 +25,12 @@
     <!-- Scroll Animation Library - AOS - Animate On Scroll (https://michalsnik.github.io/aos/) -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+    <!-- linking font-awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
     <title>janiskarasa portfolio</title>
   </head>
   <body>
@@ -272,6 +278,73 @@
         />
       </section>
       <!-- SKILLS Section END -->
+
+      <!-- SERVICE Section -->
+      <section id="services" class="services">
+        <div class="wrapper services__wrapper">
+          <!-- Adding accessible visually-hidden Services Section for Screen-readers -->
+          <h2 class="visually-hidden">Services</h2>
+          <div class="services__text">
+            <h2 class="services__headline">Services</h2>
+          </div>
+          <div class="services__grid">
+            <div class="services__item">
+              <!-- card which has 2 sides - front and back -->
+              <a href="#services">
+                <div class="services__card">
+                  <div class="services__card-front">
+                    <!-- put the icon with icon tag <i> and go to font-awesome in cdnjs.com -> in css or styling tab copy first link and place it before style link
+                    then google search 'fontawesome icon' -> click on gallery -> search for 'palette' and pick one with dark filling and copy html code snippet and paste it here -->
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h1 class="services__card-front__heading">
+                      Web Development
+                    </h1>
+                  </div>
+                  <div class="services__card-back">
+                    <h1 class="services__card-back__heading">
+                      Web Development
+                    </h1>
+                    <p class="services__card-back__description">
+                      Building and Maintaining Websites <br />
+                      Responsive Design <br />
+                      Deployment <br />
+                      Database Management <br />
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="services__item">
+              <!-- card which has 2 sides - front and back -->
+              <a href="#services">
+                <div class="services__card">
+                  <div class="services__card-front">
+                    <!-- put the icon with icon tag <i> and go to font-awesome in cdnjs.com -> in css or styling tab copy first link and place it before style link
+                        then google search 'fontawesome icon' -> click on gallery -> search for 'icon' and pick one with dark filling and copy html code snippet and paste it here -->
+                    <i class="fa-brands fa-shopify"></i>
+                    <h1 class="services__card-front__heading">
+                      Shopify Development
+                    </h1>
+                  </div>
+                  <div class="services__card-back">
+                    <h1 class="services__card-back__heading">
+                      Shopify Development
+                    </h1>
+                    <p class="services__card-back__description">
+                      Store Setups <br />
+                      App Integrations <br />
+                      Theme Customizations <br />
+                      Store Migrations <br />
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SERVICE Section END -->
 
       <!-- PROJECTS Section -->
       <section class="projects">

@@ -78,6 +78,7 @@ p {
 /* color transition to a link */
 a {
   transition: color var(--transition);
+  color: var(--text-1);
 }
 
 a.underline,
@@ -116,6 +117,12 @@ button:focus-visible {
   outline: 2px solid var(--accent);
   /* and padding */
   outline-offset: 2px;
+}
+
+i {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 10px;
 }
 
 .wrapper {
@@ -438,6 +445,124 @@ svg {
     transform: translateX(70%);
   }
 }
+
+/* SERVICES */
+/* MOBILE view */
+.services__wrapper {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--text-2);
+}
+
+.services__headline {
+  /* headline 'Projects' will start on the first vertical grid-line and end on the second one */
+  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 0.7rem + 7.68vw, 5.5rem);
+  line-height: 1;
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.services__item {
+  min-height: 250px;
+  position: relative;
+  grid-column: span 1;
+  /* animate a card */
+  transition: 0.3s ease transform;
+}
+
+.services__item:nth-child(2) {
+  border-top: 1px solid var(--accent);
+}
+
+.services__card {
+  display: block;
+  /* to put card's front and back in the same place */
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* to make it flip */
+  transform-style: preserve-3d;
+  transition: 0.3s ease transform;
+}
+
+.services__card-front,
+.services__card-back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.services__card-back {
+  /* rotates/removes a back-card content */
+  transform: rotateY(180deg);
+}
+
+.services__card-front__heading,
+.services__card-back__heading {
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-size: clamp(2rem, 0.33rem + 7.11vw, 3rem);
+  line-height: 1.17;
+  text-align: center;
+}
+
+/* Make the card flip on hover */
+.services__item:hover .services__card {
+  transform: rotateY(180deg);
+}
+
+.services__item:focus-within .services__card {
+  transform: rotateY(180deg);
+  outline: 2px solid var(--accent);
+}
+
+.services__card-back__description {
+  font-size: 1.3rem;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.services__card-front__heading {
+  margin-top: 20px;
+}
+
+/* TABLET view - 600px */
+@media screen and (min-width: 37.5em) {
+  .services__wrapper {
+    border-bottom: none;
+    padding: 40px 0;
+  }
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .services__headline {
+    margin-bottom: 3.75rem;
+  }
+  .services__item {
+    min-height: 300px;
+  }
+  .services__item:nth-child(1) {
+    border-bottom: 1px solid var(--text-2);
+  }
+  .services__item:nth-child(2) {
+    border-top: 1px solid var(--accent);
+  }
+  i {
+    font-size: 4rem;
+  }
+}
+/* DESKTOP view */
 
 /* PROJECTS */
 /* MOBILE view */
