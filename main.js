@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   recaptcha.setAttribute("data-theme", "dark");
 });
 
-
 // AOS
 // Initializing AOS - Animation On Scroll library. More info on their website - documentation
 AOS.init({
@@ -22,3 +21,27 @@ AOS.init({
   anchorPlacement: "top-bottom",
 });
 // !!! NOW ADD SOME ATTRIBUTES to Sections you want to animate
+
+// Logic of Modal that asks to allow some time for the website to load.
+const openButton = document.querySelector("[data-open-modal]");
+const closeButton = document.querySelector("[data-close-modal]");
+const modal = document.querySelector("[data-modal]");
+openButton.addEventListener("click", () => {
+  modal.showModal(); // Opens a modal
+});
+closeButton.addEventListener("click", () => {
+  modal.close(); // Opens a modal
+});
+
+// Logic that closes modal on outside click
+modal.addEventListener("click", e => {
+  const dialogDimensions = modal.getBoundingClientRect()
+  if (
+    e.clientX < dialogDimensions.left ||
+    e.clientX > dialogDimensions.right ||
+    e.clientY < dialogDimensions.top ||
+    e.clientY > dialogDimensions.bottom
+  ) {
+    modal.close()
+  }
+})

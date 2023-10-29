@@ -630,6 +630,35 @@ svg {
   margin-left: 30px;
 }
 
+/* Button View Project that opens Modal */
+.projects__links button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  line-height: 1.625;
+  padding-inline: 0;
+  padding-bottom: 10px;
+  padding-top: 0;
+}
+
+.modal {
+  background-color: var(--bg-body);
+  text-align: center;
+}
+
+.modal::backdrop {
+  background-color: hsla(0, 0%, 13%, 0.617);;
+}
+
+.modal p {
+  padding-bottom: 10px;
+}
+
+.modal a.underline {
+  margin-left: 0;
+  margin-right: 30px;
+}
+
 /* TABLET view - 600px */
 @media screen and (min-width: 37.5em) {
   .projects__grid {
