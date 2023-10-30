@@ -26,10 +26,14 @@ AOS.init({
 const openButton = document.querySelector("[data-open-modal]");
 const closeButton = document.querySelector("[data-close-modal]");
 const modal = document.querySelector("[data-modal]");
+const modalViewProjectLink = document.querySelector(".view__project__modal__link")
 openButton.addEventListener("click", () => {
   modal.showModal(); // Opens a modal
 });
 closeButton.addEventListener("click", () => {
+  modal.close(); // Opens a modal
+});
+modalViewProjectLink.addEventListener("click", () => {
   modal.close(); // Opens a modal
 });
 
