@@ -944,13 +944,14 @@ textarea:focus-visible {
 .project__navigation {
   display: flex;
   justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 .project__navigation button {
   background-color: transparent;
   border: none;
-  font-size: 1.3rem;
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.79rem + 0.89vw, 1.3rem);
   line-height: 1.625;
   padding-inline: 0;
   padding-bottom: 11px;
