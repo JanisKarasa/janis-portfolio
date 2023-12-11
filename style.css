@@ -147,6 +147,10 @@ svg {
   display: block;
 }
 
+.projects__picture > img {
+  object-fit: contain;
+}
+
 /* HEADER */
 /* MOBILE view */
 .header {
